@@ -1,48 +1,66 @@
 /* Sidebar */
 aside {
-  box-shadow: 1px 1px 1px 1px lightgrey;
   background-color: white;
-  display: grid;
-  grid-template-rows: 1fr 8fr;
+  border: 1px solid rgb(240, 237, 237);
+  position: relative;
+  height: calc(100vh - 2.5rem - 3rem);
+  flex: 0 1 auto;
   & > div#top {
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
     border-bottom: 1px solid lightgrey;
-    padding: 1rem 0.5rem;
-  }
-  h3 {
-    font-weight: normal;
-  }
-  p {
-    color: grey;
+    padding: 1.5rem 0.5rem;
+    position: relative;
+
+    & > div {
+      margin-left: 1rem;
+      h4 {
+        font-weight: normal;
+        font-size: 0.9rem;
+      }
+      p {
+        color: grey;
+        font-size: 0.7rem;
+      }
+    }
+    i.material-icons {
+      position: absolute;
+      right: 1rem;
+      top: -5px;
+      color: rgb(126, 179, 113);
+    }
   }
 
   div#menus {
     display: flex;
     flex-direction: column;
-    position: relative;
+    // position: relative;
+    margin-bottom: 1rem;
+    height: fit-content;
     button {
       display: inline-block;
-      border: none;
       background-color: unset;
-      padding: 1rem 2rem;
+      padding: 0.6rem 2rem;
       width: 100%;
       color: grey;
       text-align: left;
       cursor: pointer;
-      .fa {
+      i {
         margin-right: 1rem;
+        font-size: 1.1rem;
+      }
+      i,
+      span {
+        vertical-align: middle;
       }
       &:hover,
       &.active {
-        background-color: lightblue;
-        border-left: 2px solid blue;
-        color: blue;
+        background-color: rgb(245, 250, 255);
+        border-left: 2px solid rgb(34, 144, 255);
+        color: rgb(34, 144, 255);
       }
 
       &:last-child {
-        color: red;
         position: absolute;
         bottom: 1rem;
       }

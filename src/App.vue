@@ -2,13 +2,14 @@
   <div id="container">
     <Topbar brand="Boardash" />
     <div id="content">
-      <Sidebar />
+      <Sidebar :menus="menus" :selectedMenu="selectedMenu" :setMenu="setMenu" />
       <main>
-        <Messages />
+        <MainNav :title="selectedMenu" />
+        <Messages v-if="selectedMenu === 'Message'" />
       </main>
     </div>
     <div id="fab">
-      <button><i class="fa fa-plus"></i></button>
+      <button><i class="material-icons">add</i></button>
     </div>
   </div>
 </template>
@@ -22,8 +23,53 @@ import { defineComponent } from "vue";
 import Topbar from "@/components/topbar/index";
 import Sidebar from "@/components/sidebar/index";
 import Messages from "@/views/messages/index";
+import MainNav from "@/views/messages/MainNav.vue";
 export default defineComponent({
   name: "App",
-  components: { Topbar, Sidebar, Messages },
+  components: { Topbar, Sidebar, Messages, MainNav },
+  data() {
+    return {
+      selectedMenu: "Message",
+      menus: [
+        {
+          title: "Overview",
+          icon: "dashboard",
+        },
+        {
+          title: "Reservation",
+          icon: "bookmark",
+        },
+        {
+          title: "Meeting",
+          icon: "event_note",
+        },
+        {
+          title: "Customers",
+          icon: "group",
+        },
+        {
+          title: "Ticket",
+          icon: "local_activity",
+        },
+        {
+          title: "Message",
+          icon: "chat_bubble",
+        },
+        {
+          title: "Profile",
+          icon: "person",
+        },
+        {
+          title: "Logout",
+          icon: "power_settings_new",
+        },
+      ],
+    };
+  },
+  methods: {
+    setMenu(menu: string) {
+      this.$data.selectedMenu = menu;
+    },
+  },
 });
 </script>

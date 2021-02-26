@@ -25,11 +25,12 @@
     </div>
 
     <div class="button">
-      <button><span>You are Invited</span></button>
+      <button><span>You're Invited</span></button>
       <button class="fill">
-        <i class="fa fa-user"></i> <span>Join Now</span>
+        <i class="material-icons">videocam</i> <span>Join Now</span>
       </button>
     </div>
+    <i class="material-icons">videocam</i>
   </div>
 </template>
 
@@ -41,9 +42,7 @@
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "Ads",
-  props: {
-    title: String,
-  },
+
   data() {
     return {
       users: ["A", "K", "D", "V"],

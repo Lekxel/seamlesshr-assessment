@@ -1,5 +1,4 @@
 <template>
-  <MainNav title="Messages" />
   <Ads />
   <Notifications />
   <div>
@@ -13,7 +12,6 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import MainNav from "./MainNav.vue";
 import Ads from "./Ads.vue";
 import Notifications from "./Notifications.vue";
 import Msg from "./Msg.vue";
@@ -25,7 +23,6 @@ export default defineComponent({
     brand: String,
   },
   components: {
-    MainNav,
     Ads,
     Notifications,
     Msg,

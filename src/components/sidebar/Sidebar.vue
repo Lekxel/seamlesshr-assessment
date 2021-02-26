@@ -1,9 +1,10 @@
 <template>
   <aside>
     <div id="top">
-      <Avatar image="avatar.jpg" />
+      <i class="material-icons">bookmark</i>
+      <Avatar :size="30" image="avatar.jpg" />
       <div>
-        <h3>Welcome {{ admin }}</h3>
+        <h4>Welcome {{ admin }}</h4>
         <p>Super Admin</p>
       </div>
     </div>
@@ -14,7 +15,8 @@
         :key="menu.title"
         :class="{ active: selectedMenu === menu?.title }"
       >
-        <i :class="`fa fa-${menu?.icon}`"></i> <span>{{ menu?.title }}</span>
+        <i class="material-icons">{{ menu?.icon }}</i
+        ><span>{{ menu?.title }}</span>
       </button>
     </div>
   </aside>
@@ -24,65 +26,24 @@
 @import "./style.scss";
 </style>
 
-//
 <script lang="ts">
-// import Search from "./Seach.vue";
 import Avatar from "../ui/Avatar.vue";
 import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "Sidebar",
   props: {
-    brand: String,
+    menus: Object,
+    selectedMenu: String,
+    setMenu: Function,
   },
   components: {
-    // Search,
     Avatar,
   },
   data() {
     return {
       admin: "Essie",
-      selectedMenu: "Message",
-      menus: [
-        {
-          title: "Overview",
-          icon: "user",
-        },
-        {
-          title: "Reservation",
-          icon: "user",
-        },
-        {
-          title: "Meeting",
-          icon: "user",
-        },
-        {
-          title: "Customers",
-          icon: "user",
-        },
-        {
-          title: "Ticket",
-          icon: "user",
-        },
-        {
-          title: "Message",
-          icon: "user",
-        },
-        {
-          title: "Profile",
-          icon: "user",
-        },
-        {
-          title: "Logout",
-          icon: "user",
-        },
-      ],
     };
-  },
-  methods: {
-    setMenu(menu: string) {
-      this.$data.selectedMenu = menu;
-    },
   },
 });
 </script>

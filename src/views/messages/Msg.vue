@@ -1,11 +1,14 @@
 <template>
   <div class="msg">
     <input type="checkbox" />
-    <Avatar :size="35" image="avatar.jpg" :rounded="true" />
+    <Avatar :link="true" :size="35" :image="user?.avatar_url" :rounded="true" />
     <h4>{{ user?.login }}</h4>
-    <p id="tag">User Testing</p>
-    <p id="message">Hi Dele, we need to discuss the issue about yesterday...</p>
-    <i class="fa fa-user"></i>
+    <p class="tag">Some Tag</p>
+    <p class="message">
+      This should be the excerpt of the full message. Just think you should know
+      about it...
+    </p>
+    <button><i class="material-icons more">more_vert</i></button>
   </div>
 </template>
 

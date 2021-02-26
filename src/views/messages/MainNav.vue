@@ -3,9 +3,9 @@
     <h2>{{ title }}</h2>
     <div>
       <div id="pagination">
-        <i class="fa fa-arrow-right"></i>
+        <i class="material-icons">chevron_left</i>
         <span>1 - 50 pages</span>
-        <i class="fa fa-arrow-left"></i>
+        <i class="material-icons">chevron_right</i>
       </div>
       <div id="btns">
         <button class="active">All</button>

@@ -1,7 +1,7 @@
 <template>
   <div id="search">
     <input placeholder="Search message, people, ticket" />
-    <button><i class="fa fa-search"></i></button>
+    <button><i class="material-icons">search</i></button>
   </div>
 </template>
 
@@ -13,8 +13,5 @@
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "Search",
-  props: {
-    brand: String,
-  },
 });
 </script>

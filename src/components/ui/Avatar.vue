@@ -3,11 +3,11 @@
     <img
       v-if="image"
       :style="{
-        borderRadius: rounded ? '50%' : '12px',
+        borderRadius: rounded ? '50%' : '8px',
         width: size ? `${size}px` : '50px',
         height: size ? `${size}px` : '50px',
       }"
-      :src="require(`@/assets/${image}`)"
+      :src="!link ? require(`@/assets/${image}`) : image"
     />
     <span v-if="title"> {{ title }} </span>
   </div>
@@ -34,6 +34,7 @@ export default defineComponent({
     title: String,
     rounded: Boolean,
     size: Number,
+    link: Boolean,
   },
 });
 </script>

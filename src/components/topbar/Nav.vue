@@ -1,13 +1,13 @@
 <template>
   <nav>
-    <a href="#">
-      <i class="fa fa-bell"></i>
+    <a class="nav-link" href="#">
+      <i class="material-icons">notifications_none</i>
       <span>Set Alert</span>
     </a>
-    <a href="">
-      <Avatar :rounded="false" image="avatar.jpg" />
+    <a class="nav-link" href="">
+      <Avatar :size="30" :rounded="true" image="avatar.jpg" />
       <span>Essie Howell</span>
-      <i class="fa fa-plus-circle"></i>
+      <i id="plus" class="material-icons">add_circle_outline</i>
     </a>
   </nav>
 </template>
@@ -21,9 +21,7 @@ import Avatar from "../ui/Avatar.vue";
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "Nav",
-  props: {
-    brand: String,
-  },
+
   components: {
     Avatar,
   },

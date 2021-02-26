@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="topbar">
     <h1 id="brand">{{ brand }}</h1>
     <Search />
     <Nav />
