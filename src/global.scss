@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans");
+
+* {
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Alegreya Sans", Helvetica, Arial, sans-serif;
+}
+
+#app {
+  font-family: "Alegreya Sans", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+#container {
+  position: relative;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  margin: 2rem 2rem;
+  margin-right: 5rem;
+  column-gap: 3rem;
+}
+div#fab {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  button {
+    width: 2.8rem;
+    height: 2.8rem;
+    background-color: pink;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2.8rem;
+  }
+}

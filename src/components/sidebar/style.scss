@@ -1,0 +1,51 @@
+/* Sidebar */
+aside {
+  box-shadow: 1px 1px 1px 1px lightgrey;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 1fr 8fr;
+  & > div#top {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid lightgrey;
+    padding: 1rem 0.5rem;
+  }
+  h3 {
+    font-weight: normal;
+  }
+  p {
+    color: grey;
+  }
+
+  div#menus {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    button {
+      display: inline-block;
+      border: none;
+      background-color: unset;
+      padding: 1rem 2rem;
+      width: 100%;
+      color: grey;
+      text-align: left;
+      cursor: pointer;
+      .fa {
+        margin-right: 1rem;
+      }
+      &:hover,
+      &.active {
+        background-color: lightblue;
+        border-left: 2px solid blue;
+        color: blue;
+      }
+
+      &:last-child {
+        color: red;
+        position: absolute;
+        bottom: 1rem;
+      }
+    }
+  }
+}
